@@ -50,9 +50,10 @@ console.log(companyStartAndEndDate)
 
 // create array of ages times 2 by map method
 
-const agesTimes10 = companies.map(company => console.log(age = age * 10))
+const agesTimes10 = ages.map( agesTimes => age = age * 10)
+console.log(agesTimes10)
 
-// 
+// first square root the number and tan multiply it by 10
 
 
 
