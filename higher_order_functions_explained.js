@@ -48,15 +48,39 @@ const companyNames = companies.map(company => console.log(company.name))
 const companyStartAndEndDate = companies.map( company => `[${company.start} ${company.end}]`)
 console.log(companyStartAndEndDate)
 
-// create array of ages times 2 by map method
+// create array of ages times 2 by map method using map method
 
-const agesTimes10 = ages.map( agesTimes => age = age * 10)
+const agesTimes10 = ages.map( age => age * 10)
 console.log(agesTimes10)
 
-// first square root the number and tan multiply it by 10
+// first multiply it by 10 than square root the number using map method
+
+const agesTimesSqrt10 = ages.map( age => age * 10).map(age => Math.sqrt(age))
+console.log(agesTimesSqrt10)
+
+// sort companies by sort method 
+
+const sortedArray = companies.sort((a,b) => (a.start > b.start) ? 1 : -1)
+console.log(sortedArray)
+
+// sort ages by sort method
+const sortAge = ages.sort((a,b) => a - b)
+console.log(sortAge)
+
+// sum all the age by using reduce method 
+
+const sumAge = ages.reduce((a,b) => a + b, 0)
+console.log(sumAge)
+
+// Add total years of each companies operation using reduce method
+
+const addCompanies = companies.reduce( (total, company) => total + (company.end -company.start),0)
+
+console.log(addCompanies)
+
+// first multiply the age by 2, than filter age by 40, sort age in ascending order, than add all the array
+
+const khichdi = ages.map( age => age * 2).filter( age => age >= 40).sort((a,b) => a-b).reduce((a,b) => a + b, 0)
+console.log(khichdi)                    
 
 
-
-// map 
-// sort
-// reduce
